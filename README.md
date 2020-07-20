@@ -8,7 +8,7 @@ Written in Python, It is a early proof of concept.
 
 ## Requirements
 
-* Cython interface to HIDAPI library: https://github.com/trezor/cython-hidapi]
+* Cython interface to HIDAPI library: https://github.com/trezor/cython-hidapi
 * Python 3
 
 ## How to run
