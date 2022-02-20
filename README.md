@@ -2,6 +2,9 @@
 
 Written in Python, It is a early proof of concept.
 
+[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
+
+
 ## Supported Devices
 
 * `HyperX Alloy Origins - confirmed by me`
@@ -18,3 +21,7 @@ Written in Python, It is a early proof of concept.
 ## Configure
 
 * If you want to test it on other device than *Alloy Origins*, then you will need to change PID and VID here: `KspHidHelper.get_interface_path_for_pidvid(0x0951, 0x16e5, 3)`
+
+---
+[buymecoffee]: https://www.buymeacoffee.com/k4czp3r
+[buymecoffeebadge]: https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png
