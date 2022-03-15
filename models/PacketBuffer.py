@@ -15,7 +15,7 @@ class PacketBuffer(object):
         if os.name == 'nt':
             return [len(self.content)] + self.content
         else:
-            return self.content
+            return [0] + self.content
     def get_raw(self):
         return self.content
 
