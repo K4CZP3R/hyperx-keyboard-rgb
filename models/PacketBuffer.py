@@ -1,3 +1,5 @@
+import os
+
 class PacketBuffer(object):
     def __init__(self, size: int):
         self.content = [0]*size
@@ -10,7 +12,10 @@ class PacketBuffer(object):
         for i in range(0, len(values)):
             self.content[offset + i] = values[i]
     def get(self):
-        return [len(self.content)] + self.content
+        if os.name == 'nt':
+            return [len(self.content)] + self.content
+        else:
+            return self.content
     def get_raw(self):
         return self.content
 
