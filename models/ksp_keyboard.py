@@ -16,7 +16,7 @@ class KspKeyboard():
         written = self.hid.send_feature_report(buffer)
         read = -1
         if get_after:
-            sleep(0.02)
+            sleep(0.1)
             read = self.hid.get_feature_report(0, 0x64)
         return [written, read]
-        
+        jh

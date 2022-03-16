@@ -53,7 +53,7 @@ def COLOR_KEYBOARD_PACKETS(color_keyboard_buffer: KspPacket) -> List[KspPacket]:
     Returns:
         List[KspPacket]: Packets to be sent to (KspKeyboard)
     """
-    return [COLOR_KEYBOARD_START()] + color_keyboard_buffer.split_into_buffers(HYPERX_PACKET_BUFFER_SIZE)
+    return [COLOR_KEYBOARD_START()] + color_keyboard_buffer.split_into_buffers(64*9)
 
 def BRIGHTNESS_PACKETS(new_level: int) -> List[KspPacket]:
     """All packets needed by keyboard to set brightness of keys
