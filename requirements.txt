@@ -1,1 +1,1 @@
-hidapi==0.11.0.post2
+-e git+https://github.com/K4CZP3R/cython-hidapi@3356dbe46eb199151fa969ca773875e191142459#egg=hidapi&subdirectory=../../cython-hidapi
