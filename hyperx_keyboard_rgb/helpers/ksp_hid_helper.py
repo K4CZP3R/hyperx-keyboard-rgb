@@ -1,5 +1,5 @@
 import hid
-from hyperx_keyboard_rgb.models.ksp_hid_device import KspHidDevice
+from models.ksp_hid_device import KspHidDevice
 from typing import List
 
 
