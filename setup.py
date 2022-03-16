@@ -11,7 +11,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/K4CZP3R/hyperx-keyboard-rgb",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(include=['hyperx_keyboard_rgb', 'hyperx_keyboard_rgb.*']),
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
