@@ -18,6 +18,9 @@ keyboard_buffer = COLOR_KEYBOARD_BUFFER()
 for i in ['K','S','P']:
     keyboard_buffer.replace_at_offset(COLOR_KEY(255,0,0), KEYS[i])
 
-for i in range(0,10):
-    for packet in COLOR_KEYBOARD_PACKETS(keyboard_buffer):
-        keyboard.send_feature_report(packet.get(), True)
+try:
+    while True:
+        for packet in COLOR_KEYBOARD_PACKETS(keyboard_buffer):
+            keyboard.send_feature_report(packet.get(), True)
+except KeyboardInterrupt:
+    exit()

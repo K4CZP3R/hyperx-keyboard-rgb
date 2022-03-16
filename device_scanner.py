@@ -1,4 +1,3 @@
-from PyInquirer import prompt, print_json
 from helpers.ksp_hid_helper import KspHidHelper
 
 print("Getting all HID devices...")
