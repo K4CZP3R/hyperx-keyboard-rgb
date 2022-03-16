@@ -1,6 +1,6 @@
 ## HyperX RGB Keyboard Protocol PoC
 
-Written in Python, It is a early proof of concept.
+Written in Python, simple poc showing how to control every key (color, brightness) on HyperX keyboard.
 
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
