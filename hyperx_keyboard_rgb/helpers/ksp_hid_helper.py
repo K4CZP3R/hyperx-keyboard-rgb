@@ -1,6 +1,7 @@
 import hid
-from models.ksp_hid_device import KspHidDevice
+from hyperx_keyboard_rgb.models.ksp_hid_device import KspHidDevice
 from typing import List
+
 
 class KspHidHelper():
     @staticmethod
@@ -23,9 +24,9 @@ class KspHidHelper():
                     subdevice = True
                 except ValueError:
                     continue
-            
+
             if subdevice:
                 continue
-            
+
             devices.append(KspHidDevice(e_dict))
         return devices
