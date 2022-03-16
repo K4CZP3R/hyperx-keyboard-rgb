@@ -1,5 +1,5 @@
 from typing import List
-from models.ksp_packet import KspPacket
+from hyperx_keyboard_rgb.models.ksp_packet import KspPacket
 
 HYPERX_PACKET_BUFFER_SIZE = 64
 
