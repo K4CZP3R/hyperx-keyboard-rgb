@@ -39,7 +39,6 @@ class Keyboard(object):
         self.thread = None
 
         self.__keyboard_buf = COLOR_KEYBOARD_BUFFER()
-        self.__keyboard_start_buf = COLOR_KEYBOARD_START()
 
     @classmethod
     def from_ksp_hid_subdevice(cls, subdevice: KspHidSubDevice):
@@ -75,12 +74,10 @@ class Keyboard(object):
 
     def __thread_loop(self):
         while self.running:
-            start = time()
             for packet in COLOR_KEYBOARD_PACKETS(self.__keyboard_buf):
                 self.__send_feature_report(
                     packet.get(),  True if os.name == 'nt' else False)
-            print(f"Took {time() - start}ms")
-
+          
     def __send_feature_report(self, buffer: List[int], get_after: bool):
         if not self.connected:
             raise DeviceNotOpen(
