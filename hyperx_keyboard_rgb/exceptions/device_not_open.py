@@ -1,0 +1,2 @@
+class DeviceNotOpen(Exception):
+    pass

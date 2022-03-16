@@ -1,5 +1,6 @@
 from typing import List
 from hyperx_keyboard_rgb.models.ksp_packet import KspPacket
+from hyperx_keyboard_rgb.models.ksp_color import KspColor
 
 HYPERX_PACKET_BUFFER_SIZE = 64
 
@@ -15,21 +16,6 @@ def COLOR_KEYBOARD_START() -> KspPacket:
     return p
 
 
-def COLOR_KEY(r: int, g: int, b: int) -> List[int]:
-    """Instruction to set key to specific color
-
-    Args:
-        r (int): Red value (0-255)
-        g (int): Green value (0-255)
-        b (int): Blue value (0-255)
-
-    Returns:
-        List[int]: Instruction
-    """
-
-    return [0x81, r, g, b]
-
-
 def COLOR_KEYBOARD_BUFFER() -> KspPacket:
     """Buffer containing all key definitions. Every key has its own offset with length of (4)
 
@@ -41,7 +27,7 @@ def COLOR_KEYBOARD_BUFFER() -> KspPacket:
 
     empty_packet = KspPacket(HYPERX_PACKET_BUFFER_SIZE)
     for i in range(0, HYPERX_PACKET_BUFFER_SIZE, 4):
-        empty_packet.replace_at_offset(COLOR_KEY(0, 0, 0), i)
+        empty_packet.replace_at_offset(KspColor(0, 0, 0).get_instruction(), i)
     for i in range(0, BUFFER_LEN, 64):
         BUFFER.replace_at_offset(empty_packet.get_raw(), i)
     return BUFFER
