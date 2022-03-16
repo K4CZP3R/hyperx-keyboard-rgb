@@ -19,8 +19,8 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        'hidapi @ git+https://github.com/K4CZP3R/cython-hidapi@3356dbe46eb199151fa969ca773875e191142459#egg=hidapi&subdirectory=cython-hidapi'
+        'hidapi @ git+https://github.com/K4CZP3R/cython-hidapi@3356dbe46eb199151fa969ca773875e191142459#egg=hidapi'
     ],
     dependency_links=[
-        'git+https://github.com/K4CZP3R/cython-hidapi@3356dbe46eb199151fa969ca773875e191142459#egg=hidapi&subdirectory=cython-hidapi']
+        'git+https://github.com/K4CZP3R/cython-hidapi@3356dbe46eb199151fa969ca773875e191142459#egg=hidapi']
 )
