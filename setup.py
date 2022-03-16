@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="hyperx_keyboard_rgb",
-    version="1.3",
+    version="1.4",
     author="K4CZP3R",
     author_email="contact@k4czp3r.xyz",
     description="Control your keyboard rgb lights using hidapi",
