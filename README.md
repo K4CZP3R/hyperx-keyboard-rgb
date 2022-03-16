@@ -44,6 +44,7 @@ Getting all HID devices...
 ## Tips
 
 - You need to create function which gets the correct device (because path changes dynamically), you can identify valid device by its interface.
+- On mac (and maybe other os) you need to run it as root, otherwise device can't be opened
 
 [buymecoffee]: https://www.buymeacoffee.com/k4czp3r
 [buymecoffeebadge]: https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png
