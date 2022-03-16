@@ -1,5 +1,5 @@
-from models.ksp_keyboard import KspKeyboard
-from helpers.hyperx_alloy_origins import COLOR_KEYBOARD_BUFFER, COLOR_KEY, KEYS, COLOR_KEYBOARD_PACKETS
+from hyperx_keyboard_rgb.models.ksp_keyboard import KspKeyboard
+from hyperx_keyboard_rgb.helpers.hyperx_alloy_origins import COLOR_KEYBOARD_BUFFER, COLOR_KEY, KEYS, COLOR_KEYBOARD_PACKETS
 
 hid_path = input("Path:")
 
@@ -13,10 +13,10 @@ except Exception as e:
     exit(1)
 
 
-# Setup keyboard colors 
+# Setup keyboard colors
 keyboard_buffer = COLOR_KEYBOARD_BUFFER()
-for i in ['K','S','P']:
-    keyboard_buffer.replace_at_offset(COLOR_KEY(255,0,0), KEYS[i])
+for i in ['K', 'S', 'P']:
+    keyboard_buffer.replace_at_offset(COLOR_KEY(255, 0, 0), KEYS[i])
 
 try:
     while True:

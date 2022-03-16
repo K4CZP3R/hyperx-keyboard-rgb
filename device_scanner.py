@@ -1,4 +1,4 @@
-from helpers.ksp_hid_helper import KspHidHelper
+from hyperx_keyboard_rgb.helpers.ksp_hid_helper import KspHidHelper
 
 print("Getting all HID devices...")
 devices = KspHidHelper.get_devices()
